@@ -1,0 +1,18 @@
+.container {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	width: 100vw;
+	height: auto;
+}
+
+.login {
+	display: flex;
+	flex-direction: column;
+	row-gap: 2.5pt;
+}
+
+#error {
+	font-size: small;
+	color: red;
+}
