@@ -32,7 +32,7 @@ function displayGreeting(name) {
 }
 
 //function invocation
-function Add(num1, num2) {
+function add(num1, num2) {
 	return num1 + num2;
 }
 
@@ -43,6 +43,6 @@ function showAlert(msg, title = "info", alertType = "info", duration = 2000) {
 }
 
 //function invocation
-console.log(Add(10, 20));
+console.log(add(10, 20));
 
 showAlert("invalid credentials");
