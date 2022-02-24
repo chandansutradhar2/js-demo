@@ -5,12 +5,21 @@ class Car {
 	occupancy;
 	engineCapacity;
 
+	constructor(name, mfgName, year, pax, capacity) {
+		this.name = name;
+		this.mfgName = mfgName;
+		this.engineCapacity = capacity;
+		this.occupancy = pax;
+		this.yearOfMake = year;
+		this.start();
+	}
+
 	start() {
-		console.log("car started");
+		console.log(this.name + " started");
 	}
 
 	stop() {
-		console.log("car stopped");
+		console.log(this.name + " stopped");
 	}
 
 	accelerate() {
@@ -23,13 +32,7 @@ function stop() {
 	console.log("car stopped");
 }
 
-const carObj = new Car();
-carObj.engineCapacity = 1000;
-carObj.mfgName = "Tata";
-carObj.name = "Tibor";
-carObj.occupancy = 5;
-carObj.yearOfMake = 2020;
-carObj.start();
-console.log("car accelerating at " + carObj.accelerate());
+const carObj = new Car("Tigor", "Tata", 2020, 5, 1200);
 carObj.stop();
-console.log(carObj);
+
+console.log("car accelerating at " + carObj.accelerate());
