@@ -20,8 +20,14 @@ const captureText = (ev) => {
 };
 
 function displayGreeting(name) {
-	// setTimeout(function handler() {
-	// 	alert("Welcome " + name);
+	//anonymous function example
+	setTimeout(function () {
+		alert("Welcome " + name);
+	}, 2000);
+
+	//arrow function example
+	// setTimeout(() => {
+	// 	alert("welcome " + name);
 	// }, 2000);
 }
 
