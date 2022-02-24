@@ -1,4 +1,6 @@
+var DateTime = luxon.DateTime;
 //how to declare date
+
 let dob = new Date(); //new keyword - initialize a new object in memory
 console.log(dob.toString());
 

@@ -9,10 +9,13 @@
     <script src="./jsondemo.js"></script>
     <script src="./luxon.min.js"></script>
     <script src="./datedemo.js"></script>
+    <script src="./functiondemo.js"></script>
 </head>
 
-<body>
+<body id="container" onload="onLoad()">
 
+    <input type="text" placeholder="Enter Name" onchange="captureText(event)" />
+    <button onclick="onButtonClick()">Enter</button>
 </body>
 
 </html>
