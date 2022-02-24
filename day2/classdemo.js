@@ -1,4 +1,10 @@
 class Car {
+	name;
+	mfgName;
+	yearOfMake;
+	occupancy;
+	engineCapacity;
+
 	start() {
 		console.log("car started");
 	}
@@ -18,6 +24,12 @@ function stop() {
 }
 
 const carObj = new Car();
+carObj.engineCapacity = 1000;
+carObj.mfgName = "Tata";
+carObj.name = "Tibor";
+carObj.occupancy = 5;
+carObj.yearOfMake = 2020;
 carObj.start();
 console.log("car accelerating at " + carObj.accelerate());
 carObj.stop();
+console.log(carObj);
