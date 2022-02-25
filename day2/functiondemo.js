@@ -1,4 +1,5 @@
 var textValue;
+
 function load() {
 	console.log("load function invoked");
 	document.getElementById("container").style.backgroundColor = "red";
