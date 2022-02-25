@@ -1,34 +1,47 @@
-const fun1 = () => {
-	console.log("fun1 invoked");
-};
-
-const fun2 = () => {
+const fetchData = () => {
 	return new Promise((resolve, reject) => {
+		let products = [
+			{ name: "rayban aviator sunglasses", price: 7655, qty: 10 },
+			{ name: "fastrack oval sunglasses", price: 5500, qty: 50 },
+			{ name: "titan watch", price: 2655, qty: 6 },
+		];
 		setTimeout(() => {
-			//promise commitment / body
-			console.log("fun2 invoked");
-			resolve(true);
+			resolve(products);
+			console.log("fetch data completed");
 		}, 3000);
 	});
 };
 
-const fun3 = () => {
-	console.log("fun3 invoked");
+const transformData = (products = []) => {
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			products.forEach((product) => {
+				product.cartValue = product.price * product.qty;
+			});
+			console.log("transform data completed");
+			resolve(products);
+		}, 2000);
+	});
+};
+
+const updateUI = (products = []) => {
+	setTimeout(() => {
+		products.forEach((item) => {
+			console.log(
+				`Product Name: ${item.name} Product Rate: ${item.price} Product Qty: ${item.qty} Cart Value: ${item.cartValue}`,
+			);
+		});
+	}, 6000);
 };
 
 const errorHandler = () => {
 	console.log("error handler invoked to end program gracefully");
 };
 
-//promises to handle async code/function
+//promises to handle a sync code/function
 
-//caller code
-fun1();
-fun2()
-	.then(() => {
-		fun3();
-	})
-	.catch(() => {
-		errorHandler();
+fetchData().then((fetchResults) => {
+	transformData(fetchResults).then((transformedData) => {
+		updateUI(transformedData);
 	});
-console.log("demo of sync code");
+});
