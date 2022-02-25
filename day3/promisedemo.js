@@ -40,8 +40,24 @@ const errorHandler = () => {
 
 //promises to handle a sync code/function
 
-fetchData().then((fetchResults) => {
-	transformData(fetchResults).then((transformedData) => {
-		updateUI(transformedData);
-	});
-});
+// fetchData().then((fetchResults) => {
+// 	console.log(myName);
+// 	transformData(fetchResults).then((transformedData) => {
+// 		updateUI(transformedData);
+// 	});
+// });
+
+let myName = "chandan"; //global scoped variable
+
+function test() {
+	let localName = "chandan naresh";
+	let someName = "some one else";
+	console.log(myName, localName);
+
+	if (true) {
+		let blockScopeName = "sutradhar";
+		console.log(blockScopeName);
+	}
+}
+
+test();
