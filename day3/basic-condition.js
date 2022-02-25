@@ -61,13 +61,15 @@ const renderNavBar = (role) => {
 //ifDemo(70);
 
 const ifElseNew = (isAdmin) => {
-	if (isAdmin) {
-		console.log("admin user");
-		//alert("admin login");
-	} else {
-		console.log("non admin user");
-		//alert("non admin login");
-	}
+	// if (isAdmin) {
+	// 	console.log("admin user");
+	// 	//alert("admin login");
+	// } else {
+	// 	console.log("non admin user");
+	// 	//alert("non admin login");
+	// }
+
+	if (isAdmin) console.log("admin");
 
 	//return isAdmin === true ? console.log("admin user") : console.log("non admin user");
 	isAdmin === true ? console.log("admin user") : console.log("non admin user");
