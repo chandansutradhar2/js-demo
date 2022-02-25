@@ -1,6 +1,6 @@
 const forLoopDemo = (names) => {
 	let length = names.length;
-	for (let index = length - 1; index >= 0; index--) {
+	for (let index = 0; index < length; index++) {
 		console.log("welcome " + names[index]);
 		if (names[index] == "c") break;
 	}
@@ -9,7 +9,7 @@ const forLoopDemo = (names) => {
 const forEachLoop = (names) => {
 	names.forEach((ele, idx) => {
 		console.log("welcome " + ele, "index is ", idx);
-		//   if (names[index] == "c") break;
+		if (ele == "c") return;
 	});
 };
 
