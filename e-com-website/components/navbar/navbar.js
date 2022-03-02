@@ -34,3 +34,15 @@ const showCatgory = (menuName) => {
 	});
 	popover.toggle();
 };
+
+function demo() {
+	let products = ["a", "b", "c"];
+
+	for (let index = 0; index < products.length; index++) {
+		console.log(products[index]);
+	}
+
+	products.forEach((ele) => console.log("element is " + ele));
+}
+
+demo();
