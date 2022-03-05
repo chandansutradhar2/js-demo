@@ -1,0 +1,5 @@
+<p>login works!</p>
+<input type="text" #email placeholder="enter email" />
+<input type="password" #password placeholder="enter password" />
+<button (click)="login(email.value, password.value)">Login</button>
+<button (click)="googleLogin()">Login with Google</button>
